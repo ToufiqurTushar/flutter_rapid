@@ -32,7 +32,7 @@ class RapidSystemConfig {
   String currentEnv = "dev";
   Map<String, RapidEnvConfig> availableEnvironment = {};
 
-  GetObserver? routeObserver;
+  List<GetObserver> routeObservers;
 
   initConfig(var env) {
     return Get.put<RapidEnvConfig>(env, permanent: true);
