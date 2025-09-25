@@ -130,7 +130,7 @@ class FlutterRapidApp extends StatelessWidget {
 
   Widget _getMaterialAppUI(BuildContext context) {
     return GetMaterialApp(
-      navigatorObservers: _sysConf.routeObservers,
+      navigatorObservers: _sysConf.navigatorObservers,
       home: _sysConf.home,
       initialRoute: getInitialRoute(),
       title: _sysConf.appTitle,
