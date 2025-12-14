@@ -1,9 +1,13 @@
 import 'package:fr_core/fr_core.dart';
+import 'package:fr_core/fr_core.dart';
+import 'package:flutter_rapid/config/rapid_system_config.dart';
 
 class FrAuthPage extends StatelessWidget {
   Widget? titleWidget;
   Widget? logoWidget;
+  String? brandTitle;
   Color? cardColor;
+  Color? brandTitleColor;
   EdgeInsetsGeometry? margin;
   EdgeInsetsGeometry? padding;
   final Widget child;
@@ -12,9 +16,11 @@ class FrAuthPage extends StatelessWidget {
     super.key,
     this.titleWidget,
     this.logoWidget,
+    this.brandTitle,
     this.margin,
     this.padding,
     this.cardColor,
+    this.brandTitleColor,
     required this.child,
   });
 
@@ -64,6 +70,21 @@ class FrAuthPage extends StatelessWidget {
                 );
               },
             ),
+            if(brandTitle != null)
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 40.0),
+                child: Text(
+                  brandTitle!,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 18.0,
+                    color: brandTitleColor,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
