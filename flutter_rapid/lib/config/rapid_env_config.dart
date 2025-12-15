@@ -8,4 +8,5 @@ class RapidEnvConfig extends RapidService {
   bool debug = true;
   String bannerTitle = 'DEBUG';
   String baseUrl = "";
+  String appUid = "RapidApp";
 }
