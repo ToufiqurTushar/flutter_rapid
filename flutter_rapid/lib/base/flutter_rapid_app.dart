@@ -71,7 +71,7 @@ class FlutterRapidApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RLog.error('locale:${Get.locale?.toString()??'en_US'}');
+    RLog.error('locale:${Get.locale?.toString()??_sysConf.fallbackLocale.toString()}');
     globalStateLogic.availableLocal = _sysConf.availableLocal;
     globalStateLogic.availableFont = _sysConf.availableFont;
 
