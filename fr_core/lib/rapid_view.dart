@@ -17,6 +17,7 @@ abstract class RapidView<T> extends RapidBasicView<T> {
   GetPageRoute getPageRoute(RouteSettings settings) {
     return GetPageRoute(
       settings: settings,
+      arguments: settings.arguments,
       page: () => this,
       binding: BindingsBuilder(
         () {
